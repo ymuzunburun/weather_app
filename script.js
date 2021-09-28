@@ -13,6 +13,9 @@ const getResult=(cityname)=>{
         return weather.json()
     })
     .then(displayResult)
+    .catch(()=>{
+        confirm("Lütfen geçerli bir sehir giriniz")
+    })
 }
 
 const displayResult=(result)=>{
